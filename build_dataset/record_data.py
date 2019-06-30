@@ -7,7 +7,7 @@ def record_voice():
     seconds = 2
     name = input("Please Enter Your Name:")
     label= input("Please Enter Your Label:")
-    for i in range(5):
+    for i in range(10):
         input("Please press key to record voice {}_{}_{}:".format(label,name, i))
         myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=1)
         sd.wait()
