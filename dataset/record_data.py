@@ -20,7 +20,7 @@ def record_voice():
         sd.wait()
         write('{}/{}_{}_{}.wav'.format(label,label,name,i), fs, my_recording)
 
-
-record_voice()
+for i in range(10):
+    record_voice()
 
 
