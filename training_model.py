@@ -45,7 +45,8 @@ def feature_extractor(sound_path):
 def train_model(data):
     learned_hmm = dict()
     for label in data.keys():
-        model = hmm.GMMHMM(n_components=8)
+        model = hmm.GMMHMM(n_components=4
+                           ,covariance_type="full")
         feature = np.ndarray(shape=(1, 13))
         for list_feature in data[label]:
             feature = np.vstack((feature, list_feature))
